@@ -1,0 +1,99 @@
+<html>
+<head>
+    <title>Fitness Membership Form</title>
+	
+	<style>
+	        
+			 body {
+            font-family: 'Open Sans', sans-serif;
+            padding: 20px;
+            color: #333;
+            text-align: center;
+			background-color: lightblue;
+        }
+
+			h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #1a237e; 
+        }
+
+        h2 {
+            margin-top: 50px;
+            color: #283593;
+			}
+			.form-link {
+            background: #e8491d;
+            color: #fff;
+            padding: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+		
+      .form-link {
+            background: #e8491d;
+            color: #fff;
+            padding: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+	</style>
+    <script>
+        function doSubmit() {
+            var f = document.MemberForm;
+            if (f.customer.value == "" || f.email.value == "" || f.phone.value == "") {
+                alert("Submission Unsuccessful.");
+            } else {
+                alert("Success! Your membership form has been submitted.");
+            }
+        }
+    </script>
+</head>
+
+
+    <h1>Fitness Membership Form</h1>
+
+    <form name="MemberForm">
+        <h4>Step 1: Contact Information</h4>
+        <font face="Courier New">
+            Name:  <input name="customer" type="text" size="40" maxlength="50"><br>
+            Email: <input name="email" type="email" size="30" maxlength="100"><br>
+            Phone: <input name="phone" type="number" style="width: 135px;">
+        </font>
+
+        <h4>Step 2: Select your membership plan:</h4>
+        <font face="Courier New">
+            <input name="plan" type="radio"> Basic ($15) (Gym Only)<br>
+            <input name="plan" type="radio"> Silver ($25) (Gym + Pool)<br>
+            <input name="plan" type="radio"> Gold ($35)(All Access)
+        </font>
+
+        <h4>Step 3: Select optional add-ons:</h4>
+        <font face="Courier New">
+            <input name="addons" type="checkbox"> Personal Trainer ($100)<br>
+            <input name="addons" type="checkbox"> Towel Service ($50)<br>
+            <input name="addons" type="checkbox"> Juice Bar Pass ($25)
+        </font>
+
+        <h4>Step 4: Select your preferred workout location:</h4>
+        <font face="Courier New">
+            <select name="location">
+                <option value="none">None / Not Decided</option>
+                <option value="downtown">Downtown Main St.</option>
+                <option value="uptown">Uptown Plaza</option>
+                <option value="suburbs">Westside Suburbs</option>
+            </select>
+        </font>
+
+        <p>
+            <input type="button" value="Submit Application" onClick="doSubmit()">
+        </p>
+    </form>
+	
+	<br><br><br>
+
+<a href="Index.html" class="form-link">Click here to go back to the homepage</a>
+</body>
+</html>
